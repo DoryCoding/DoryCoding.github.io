@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Dory的博客</title>
+  <title>svn版本过低问题 | Dory的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="where there is a will,there is a way.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dory的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="svn up出现以下警告：
+1234svn: E155021: This client is too old to work with the working copy at&amp;apos;/Users/daolizou/visualogies/web/trunk&amp;apos; (format 31).You need to get a newer Subversion client. For more">
+<meta property="og:type" content="article">
+<meta property="og:title" content="svn版本过低问题">
+<meta property="og:url" content="http://yoursite.com/2016/11/29/svn版本过低问题/index.html">
 <meta property="og:site_name" content="Dory的博客">
-<meta property="og:description" content="where there is a will,there is a way.">
+<meta property="og:description" content="svn up出现以下警告：
+1234svn: E155021: This client is too old to work with the working copy at&amp;apos;/Users/daolizou/visualogies/web/trunk&amp;apos; (format 31).You need to get a newer Subversion client. For more">
+<meta property="og:updated_time" content="2016-11-29T12:12:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dory的博客">
-<meta name="twitter:description" content="where there is a will,there is a way.">
+<meta name="twitter:title" content="svn版本过低问题">
+<meta name="twitter:description" content="svn up出现以下警告：
+1234svn: E155021: This client is too old to work with the working copy at&amp;apos;/Users/daolizou/visualogies/web/trunk&amp;apos; (format 31).You need to get a newer Subversion client. For more">
   
     <link rel="alternative" href="/atom.xml" title="Dory的博客" type="application/atom+xml">
   
@@ -142,172 +146,102 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-svn版本过低问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/svn版本过低问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T12:11:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/svn版本过低问题/">svn版本过低问题</a>
+    <h1 class="article-title" itemprop="name">
+      svn版本过低问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>svn up出现以下警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">svn: E155021: This client is too old to work with the working copy at</div><div class="line">&apos;/Users/daolizou/visualogies/web/trunk&apos; (format 31).</div><div class="line">You need to get a newer Subversion client. For more details, see</div><div class="line">  http://subversion.apache.org/faq.html#working-copy-format-change</div></pre></td></tr></table></figure>
+<p>产生错误的原因是本地svn的版本太低。</p>
+<a id="more"></a>
+<p>网上 <a href="http://www.tuicool.com/articles/vURjUr" target="_blank" rel="external">SVN：This client is too old to work with working copy…解决方法 - 推酷</a> 有一篇解决这个问题的办法。但是该办法只对1.6版本以下的有效。对1.7之后的无效。另一种解决办法就是升级svn的版本。</p>
+<ul>
+<li>svn版本升级：<br>下载—&gt;安装—&gt;配置<ol>
+<li>到 <a href="http://www.wandisco.com/subversion/download#osx" target="_blank" rel="external">http://www.wandisco.com/subversion/download#osx</a> 下载对应版本的svn</li>
+<li>点击某个版本后需要填写相关信息。其中邮箱要填写真是邮箱，它会发下载链接给你。</li>
+<li>双击安装</li>
+<li>配置。<ol>
+<li>vim  .bash_profile。在里面添加 <code>export PATH=/opt/subversion/bin:$PATH</code></li>
+<li>source  .bash_profile。更新bash的环境变量。</li>
+<li>svn —version。查看svn版本。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/29/svn版本过低问题/" class="archive-article-date">
+  	<time datetime="2016-11-29T12:11:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/svn/">svn</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/git clone问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T09:15:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/git clone问题/">git clone问题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/29/git clone问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git clone问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/我的第一篇随笔/" class="archive-article-date">
-  	<time datetime="2016-11-29T04:36:37.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/我的第一篇随笔/">我的第一篇随笔</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/github创建博客流程/" class="archive-article-date">
-  	<time datetime="2016-11-29T03:43:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/github创建博客流程/">github创建博客流程</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/hello-world/" class="archive-article-date">
-  	<time datetime="2016-11-28T17:17:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
       </div>
@@ -330,8 +264,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
