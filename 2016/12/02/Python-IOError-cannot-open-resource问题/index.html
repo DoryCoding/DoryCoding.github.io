@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dory的博客</title>
+  <title>Python IOError: cannot open resource问题 | Dory的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="where there is a will,there is a way.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dory的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="利用PIL库将文字生成图片验证码的时候不能显示验证码并报以下错误：
+123456789101112131415Traceback (most recent call last):  File &amp;quot;/Library/Python/2.7/site-packages/tornado-4.3-py2.7-macosx-10.10-intel.egg/tornado/web.py&amp;quot;, l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python IOError: cannot open resource问题">
+<meta property="og:url" content="http://yoursite.com/2016/12/02/Python-IOError-cannot-open-resource问题/index.html">
 <meta property="og:site_name" content="Dory的博客">
-<meta property="og:description" content="where there is a will,there is a way.">
+<meta property="og:description" content="利用PIL库将文字生成图片验证码的时候不能显示验证码并报以下错误：
+123456789101112131415Traceback (most recent call last):  File &amp;quot;/Library/Python/2.7/site-packages/tornado-4.3-py2.7-macosx-10.10-intel.egg/tornado/web.py&amp;quot;, l">
+<meta property="og:updated_time" content="2016-12-01T16:25:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dory的博客">
-<meta name="twitter:description" content="where there is a will,there is a way.">
+<meta name="twitter:title" content="Python IOError: cannot open resource问题">
+<meta name="twitter:description" content="利用PIL库将文字生成图片验证码的时候不能显示验证码并报以下错误：
+123456789101112131415Traceback (most recent call last):  File &amp;quot;/Library/Python/2.7/site-packages/tornado-4.3-py2.7-macosx-10.10-intel.egg/tornado/web.py&amp;quot;, l">
   
     <link rel="alternative" href="/atom.xml" title="Dory的博客" type="application/atom+xml">
   
@@ -142,204 +146,92 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-Python-IOError-cannot-open-resource问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/Python-IOError-cannot-open-resource问题/" class="archive-article-date">
-  	<time datetime="2016-12-01T16:09:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/Python-IOError-cannot-open-resource问题/">Python IOError: cannot open resource问题</a>
+    <h1 class="article-title" itemprop="name">
+      Python IOError: cannot open resource问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>利用PIL库将文字生成图片验证码的时候不能显示验证码并报以下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/tornado-4.3-py2.7-macosx-10.10-intel.egg/tornado/web.py&quot;, line 1443, in _execute</div><div class="line">    result = method(*self.path_args, **self.path_kwargs)</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/handler/CaptchaHandler.py&quot;, line 20, in get</div><div class="line">    code_img,capacha_code= captchaHelper.createCodeImage();</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/helper/CaptchaHelper.py&quot;, line 48, in createCodeImage</div><div class="line">    strs = create_strs()</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/helper/CaptchaHelper.py&quot;, line 38, in create_strs</div><div class="line">    font = ImageFont.truetype(font_type, font_size)</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/PIL/ImageFont.py&quot;, line 240, in truetype</div><div class="line">    return FreeTypeFont(font, size, index, encoding)</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/PIL/ImageFont.py&quot;, line 129, in __init__</div><div class="line">    self.font = core.getfont(&apos;/Library/Fonts/&apos;+font, size, index, encoding)</div><div class="line">IOError: cannot open resource</div></pre></td></tr></table></figure>
+<p>原因是缺少对应的字体库。</p>
+<a id="more"></a>
+<p>之前运行正常，怎么会突然挂掉呢。仔细看看项目的源码发现在captchaHelper这个文件中有下面这一行代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">def createCodeImage(self,size=(120,30),img_type=&apos;jpg&apos;, mode=&apos;RGB&apos;,bg_color=(255,255,255),fg_color=(0,0,255), font_size=18,font_type=&apos;arial.ttf&apos;,length=4,draw_lines=True,n_line=(1,2),draw_points=True,point_chance=2):</div></pre></td></tr></table></figure>
+<p>可以看到项目默认的字体是Arial字体。再到python的Fonts文件夹里面查看发现没有这个字体，问题到这里就好解决了。</p>
+<p>网上下载Arial字体放到python的Fonts文件夹下，刷新页面出现验证码。</p>
+<p>搞定！原因可能是我升级系统后字体删除了。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/02/Python-IOError-cannot-open-resource问题/" class="archive-article-date">
+  	<time datetime="2016-12-01T16:09:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-02</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/svn版本过低问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T12:11:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/svn版本过低问题/">svn版本过低问题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/svn/">svn</a></li></ul>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/29/svn版本过低问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">svn版本过低问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/git clone问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T09:15:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/git clone问题/">git clone问题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/我的第一篇随笔/" class="archive-article-date">
-  	<time datetime="2016-11-29T04:36:37.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/我的第一篇随笔/">我的第一篇随笔</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/github创建博客流程/" class="archive-article-date">
-  	<time datetime="2016-11-29T03:43:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/github创建博客流程/">github创建博客流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/29/hello-world/" class="archive-article-date">
-  	<time datetime="2016-11-28T17:17:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
       </div>
@@ -362,8 +254,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
