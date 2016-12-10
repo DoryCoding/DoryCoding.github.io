@@ -154,7 +154,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/02/Python-IOError-cannot-open-resource问题/">Python IOError: cannot open resource问题</a>
+      <a class="article-title" href="/2016/06/22/Python-IOError-cannot-open-resource问题/">Python IOError: cannot open resource问题</a>
     </h1>
   
 
@@ -166,14 +166,66 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/tornado-4.3-py2.7-macosx-10.10-intel.egg/tornado/web.py&quot;, line 1443, in _execute</div><div class="line">    result = method(*self.path_args, **self.path_kwargs)</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/handler/CaptchaHandler.py&quot;, line 20, in get</div><div class="line">    code_img,capacha_code= captchaHelper.createCodeImage();</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/helper/CaptchaHelper.py&quot;, line 48, in createCodeImage</div><div class="line">    strs = create_strs()</div><div class="line">  File &quot;/Users/***/Desktop/unity-foreground/trunk/helper/CaptchaHelper.py&quot;, line 38, in create_strs</div><div class="line">    font = ImageFont.truetype(font_type, font_size)</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/PIL/ImageFont.py&quot;, line 240, in truetype</div><div class="line">    return FreeTypeFont(font, size, index, encoding)</div><div class="line">  File &quot;/Library/Python/2.7/site-packages/PIL/ImageFont.py&quot;, line 129, in __init__</div><div class="line">    self.font = core.getfont(&apos;/Library/Fonts/&apos;+font, size, index, encoding)</div><div class="line">IOError: cannot open resource</div></pre></td></tr></table></figure>
 <p>原因是缺少对应的字体库。</p>
         <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/12/02/Python-IOError-cannot-open-resource问题/#more">more >></a>
+          <a class="article-more-a"  href="/2016/06/22/Python-IOError-cannot-open-resource问题/#more">more >></a>
         </p>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/12/02/Python-IOError-cannot-open-resource问题/" class="archive-article-date">
-  	<time datetime="2016-12-01T16:09:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-02</time>
+      <a href="/2016/06/22/Python-IOError-cannot-open-resource问题/" class="archive-article-date">
+  	<time datetime="2016-06-21T16:09:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-pip-install-太慢" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/11/pip-install-太慢/">pip install 太慢</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在利用pip install安装python第三方库的时候，往往会碰到下载速度过慢导致下载失败的情况，这时候可以pip安装源替换成国内镜像。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/06/11/pip-install-太慢/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/11/pip-install-太慢/" class="archive-article-date">
+  	<time datetime="2016-06-10T16:31:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-11</time>
 </a>
       
 	<div class="article-tag tagcloud">
@@ -208,7 +260,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/svn版本过低问题/">svn版本过低问题</a>
+      <a class="article-title" href="/2016/06/09/svn版本过低问题/">svn版本过低问题</a>
     </h1>
   
 
@@ -220,14 +272,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">svn: E155021: This client is too old to work with the working copy at</div><div class="line">&apos;/Users/daolizou/visualogies/web/trunk&apos; (format 31).</div><div class="line">You need to get a newer Subversion client. For more details, see</div><div class="line">  http://subversion.apache.org/faq.html#working-copy-format-change</div></pre></td></tr></table></figure>
 <p>产生错误的原因是本地svn的版本太低。</p>
         <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/11/29/svn版本过低问题/#more">more >></a>
+          <a class="article-more-a"  href="/2016/06/09/svn版本过低问题/#more">more >></a>
         </p>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/29/svn版本过低问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T12:11:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
+      <a href="/2016/06/09/svn版本过低问题/" class="archive-article-date">
+  	<time datetime="2016-06-09T12:11:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-09</time>
 </a>
       
 	<div class="article-tag tagcloud">
@@ -262,7 +314,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/git clone问题/">git clone问题</a>
+      <a class="article-title" href="/2016/05/21/git clone问题/">git clone问题</a>
     </h1>
   
 
@@ -278,14 +330,14 @@
 </blockquote>
 <p>出现这个问题是因为没有在github账号添加SSH key。</p>
         <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/11/29/git clone问题/#more">more >></a>
+          <a class="article-more-a"  href="/2016/05/21/git clone问题/#more">more >></a>
         </p>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/29/git clone问题/" class="archive-article-date">
-  	<time datetime="2016-11-29T09:15:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
+      <a href="/2016/05/21/git clone问题/" class="archive-article-date">
+  	<time datetime="2016-05-21T09:15:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-21</time>
 </a>
       
 	<div class="article-tag tagcloud">
@@ -320,7 +372,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/我的第一篇随笔/">我的第一篇随笔</a>
+      <a class="article-title" href="/2016/05/02/我的第一篇随笔/">我的第一篇随笔</a>
     </h1>
   
 
@@ -328,7 +380,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>有志者，事竟成。
+        <pre><code>有志者，事竟成。破釜沉舟，百二秦关终属楚。
+苦心人，天不负。卧薪尝胆，三千越甲可吞吴。
 
                                                 ---这是我的第一篇随笔
 </code></pre>
@@ -336,8 +389,8 @@
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/29/我的第一篇随笔/" class="archive-article-date">
-  	<time datetime="2016-11-29T04:36:37.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
+      <a href="/2016/05/02/我的第一篇随笔/" class="archive-article-date">
+  	<time datetime="2016-05-02T04:36:37.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-02</time>
 </a>
       
 	<div class="article-tag tagcloud">
@@ -372,7 +425,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/github创建博客流程/">github创建博客流程</a>
+      <a class="article-title" href="/2016/05/01/github创建博客流程/">github创建博客流程</a>
     </h1>
   
 
@@ -397,61 +450,8 @@
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/29/github创建博客流程/" class="archive-article-date">
-  	<time datetime="2016-11-29T03:43:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/11/29/hello-world/" class="archive-article-date">
-  	<time datetime="2016-11-28T17:17:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-29</time>
+      <a href="/2016/05/01/github创建博客流程/" class="archive-article-date">
+  	<time datetime="2016-05-01T03:43:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-05-01</time>
 </a>
       
       

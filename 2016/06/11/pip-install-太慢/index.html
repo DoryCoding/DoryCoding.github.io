@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016/12 | Dory的博客</title>
+  <title>pip install 太慢 | Dory的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="where there is a will,there is a way.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dory的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/12/index.html">
+  <meta name="description" content="在利用pip install安装python第三方库的时候，往往会碰到下载速度过慢导致下载失败的情况，这时候可以pip安装源替换成国内镜像。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pip install 太慢">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/pip-install-太慢/index.html">
 <meta property="og:site_name" content="Dory的博客">
-<meta property="og:description" content="where there is a will,there is a way.">
+<meta property="og:description" content="在利用pip install安装python第三方库的时候，往往会碰到下载速度过慢导致下载失败的情况，这时候可以pip安装源替换成国内镜像。">
+<meta property="og:updated_time" content="2016-12-10T16:45:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dory的博客">
-<meta name="twitter:description" content="where there is a will,there is a way.">
+<meta name="twitter:title" content="pip install 太慢">
+<meta name="twitter:description" content="在利用pip install安装python第三方库的时候，往往会碰到下载速度过慢导致下载失败的情况，这时候可以pip安装源替换成国内镜像。">
   
     <link rel="alternative" href="/atom.xml" title="Dory的博客" type="application/atom+xml">
   
@@ -142,54 +143,112 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-pip-install-太慢" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/Python-IOError-cannot-open-resource问题/" class="archive-article-date">
-  	<time datetime="2016-12-01T16:09:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/Python-IOError-cannot-open-resource问题/">Python IOError: cannot open resource问题</a>
+    <h1 class="article-title" itemprop="name">
+      pip install 太慢
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在利用pip install安装python第三方库的时候，往往会碰到下载速度过慢导致下载失败的情况，这时候可以pip安装源替换成国内镜像。</p>
+<a id="more"></a>
+<p>国内源：</p>
+<pre><code>新版ubuntu要求使用https源，要注意。
+
+清华：https://pypi.tuna.tsinghua.edu.cn/simple
+
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+
+华中理工大学：http://pypi.hustunique.com/
+
+山东理工大学：http://pypi.sdutlinux.org/ 
+
+豆瓣：http://pypi.douban.com/simple/
+</code></pre><p>使用方法：</p>
+<pre><code>sudo pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ***
+</code></pre><p>如果第一个不行，就多试几个。</p>
+<p>另外有时安装过程中会遇到<code>Permission denied</code>的情况，这是要仔细根据提示到相应的文件夹下面修改对应文件的权限。然后再重新运行上述命令。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/11/pip-install-太慢/" class="archive-article-date">
+  	<time datetime="2016-06-10T16:31:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-11</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+    <a href="/2016/06/22/Python-IOError-cannot-open-resource问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python IOError: cannot open resource问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/09/svn版本过低问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">svn版本过低问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
 
 
       </div>
@@ -212,8 +271,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
