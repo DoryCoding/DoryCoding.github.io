@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>python值传递&amp;引用传递 | Dory的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="值传递与引用传递的区别">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python值传递&引用传递">
+<meta property="og:url" content="http://yoursite.com/2016/08/13/python值传递-引用传递/index.html">
+<meta property="og:site_name" content="Dory的博客">
+<meta property="og:description" content="值传递与引用传递的区别">
+<meta property="og:updated_time" content="2016-12-13T10:40:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python值传递&引用传递">
+<meta name="twitter:description" content="值传递与引用传递的区别">
+  
+    <link rel="alternative" href="/atom.xml" title="Dory的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://static0.tuicool.com/profile/d4728460ab18_1479315785.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dory</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">where there is a will,there is a way.</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+				<li><a href="/tags/git">git</a></li>
+	        
+				<li><a href="/tags/svn">svn</a></li>
+	        
+				<li><a href="/tags/iOS">iOS</a></li>
+	        
+				<li><a href="/tags/python">python</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/DoryCoding" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Dory</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://static0.tuicool.com/profile/d4728460ab18_1479315785.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dory</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">where there is a will,there is a way.</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/git">git</a></li>
+		        
+					<li><a href="/tags/svn">svn</a></li>
+		        
+					<li><a href="/tags/iOS">iOS</a></li>
+		        
+					<li><a href="/tags/python">python</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/DoryCoding" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-python值传递-引用传递" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python值传递&amp;引用传递
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="值传递与引用传递的区别"><a href="#值传递与引用传递的区别" class="headerlink" title="值传递与引用传递的区别"></a>值传递与引用传递的区别</h2><a id="more"></a>
+<h3 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h3><p>值传递：方法调用时，实际参数把他的值传递给对应的形式参数，方法执行中形式参数值的改变不影响实际参数的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a1 = 520</div><div class="line">&gt;&gt;&gt; a2 = a1</div><div class="line">&gt;&gt;&gt; print a1</div><div class="line">520</div><div class="line">&gt;&gt;&gt; print a2</div><div class="line">520</div><div class="line">&gt;&gt;&gt; a2 = a1 + 1</div><div class="line">&gt;&gt;&gt; print a2</div><div class="line">521</div><div class="line">&gt;&gt;&gt; print a1</div><div class="line">520</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<h3 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h3><p>引用传递：也称地址传递，在方法调用时，实际上是把参数的引用（传的是地址，而不是参数的值）传递给方法中对应的形式参数，在方法执行中，对形式参数的操作实际上就是对实际参数的操作，方法执行中形式参数值得改变将会影响实际参数的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a1 = [1,2]</div><div class="line">&gt;&gt;&gt; a2 = a1</div><div class="line">&gt;&gt;&gt; a2.append(3)</div><div class="line">&gt;&gt;&gt; print a1</div><div class="line">[1, 2, 3]</div><div class="line">&gt;&gt;&gt; print a2</div><div class="line">[1, 2, 3]</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<p>在python中，数字、字符或者元组()等不可变对象类型都属于值传递，而字典dict或者列表list等可变对象类型属于引用传递。</p>
+<p>如果要想修改新赋值后原对象不变，则需要用到python的copy模块，即对象拷贝。</p>
+<p>对象拷贝又包括浅拷贝和深拷贝。</p>
+<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>对可变对象而言，对象的值一样可能包含有对其他对象的引用，浅拷贝产生的新对象，虽然具有完全不同的id，但是其值若包含可变对象，这些对象和原始对象中的值包含同样的引用。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; import copy</div><div class="line">&gt;&gt;&gt; l = &#123;&apos;a&apos;: [1,2,3], &apos;b&apos;:[4,5,6]&#125;</div><div class="line">&gt;&gt;&gt; c = copy.copy(l)</div><div class="line">&gt;&gt;&gt; id(l) == id(c)</div><div class="line">False</div><div class="line">&gt;&gt;&gt; l[&apos;a&apos;].append(&apos;4&apos;)</div><div class="line">&gt;&gt;&gt; c[&apos;b&apos;].append(&apos;7&apos;)</div><div class="line">&gt;&gt;&gt; l</div><div class="line">&#123;&apos;a&apos;: [1, 2, 3, &apos;4&apos;], &apos;b&apos;: [4, 5, 6, &apos;7&apos;]&#125;</div><div class="line">&gt;&gt;&gt; c</div><div class="line">&#123;&apos;a&apos;: [1, 2, 3, &apos;4&apos;], &apos;b&apos;: [4, 5, 6, &apos;7&apos;]&#125;</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<p>可见浅拷贝产生的新对象中可变对象的值在发生改变时会对原对象的值产生副作用，因为这些值是同一个引用。</p>
+<p>浅拷贝仅仅对对象自身创建了一份拷贝，而没有在进一步处理对象中包含的值。因此使用浅拷贝的典型使用场景是：对象自身发生改变的同时需要保持对象中的值完全相同，比如list排序：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def sorted_list(olist, key=None):</div><div class="line">...     copied_list = copy.copy(olist)</div><div class="line">...     copied_list.sort(key=key)</div><div class="line">...     return copied_list</div><div class="line">... </div><div class="line">&gt;&gt;&gt; a = [3,2,1]</div><div class="line">&gt;&gt;&gt; b = sorted_list(a)</div><div class="line">&gt;&gt;&gt; a</div><div class="line">[3, 2, 1]</div><div class="line">&gt;&gt;&gt; b</div><div class="line">[1, 2, 3]</div></pre></td></tr></table></figure>
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>深拷贝不仅仅拷贝了原始对象自身，也对其包含的值进行拷贝，它会递归的查找对象中包含的其他对象的引用，来完成更深层次拷贝。因此，深拷贝产生的副本可以随意修改而不需要担心会引起原始值的改变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; import copy</div><div class="line">&gt;&gt;&gt; l = &#123;&apos;a&apos;: [1,2,3], &apos;b&apos;:[4,5,6]&#125;</div><div class="line">&gt;&gt;&gt; c = copy.deepcopy(l)</div><div class="line">&gt;&gt;&gt; id(l) == id(c)</div><div class="line">False</div><div class="line">&gt;&gt;&gt; l[&apos;a&apos;].append(&apos;4&apos;)</div><div class="line">&gt;&gt;&gt; c[&apos;b&apos;].append(&apos;7&apos;)</div><div class="line">&gt;&gt;&gt; l</div><div class="line">&#123;&apos;a&apos;: [1, 2, 3, &apos;4&apos;], &apos;b&apos;: [4, 5, 6]&#125;</div><div class="line">&gt;&gt;&gt; c</div><div class="line">&#123;&apos;a&apos;: [1, 2, 3], &apos;b&apos;: [4, 5, 6, &apos;7&apos;]&#125;</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<p>值得注意的是，深拷贝并非完全递归查找所有对象，因为一旦对象引用了自身，完全递归可能会导致无线循环。一个对象被拷贝了，python会对该对象做个标记，如果还有其他需要拷贝的对象引用着该对象，他们的拷贝其实指向的是同一份拷贝。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a = [1,2]</div><div class="line">&gt;&gt;&gt; b = [a,a]</div><div class="line">&gt;&gt;&gt; b</div><div class="line">[[1, 2], [1, 2]]</div><div class="line">&gt;&gt;&gt; c = deepcopy(b)</div><div class="line">&gt;&gt;&gt; id(b[0]) == id(c[0])</div><div class="line">False</div><div class="line">&gt;&gt;&gt; id(b[0]) == id(b[1])</div><div class="line">True</div><div class="line">&gt;&gt;&gt; c</div><div class="line">[[1, 2], [1, 2]]</div><div class="line">&gt;&gt;&gt; c[0].append(3)  #c list 中包含的两份拷贝指向同一处</div><div class="line">&gt;&gt;&gt; c</div><div class="line">[[1, 2, 3], [1, 2, 3]]</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/08/13/python值传递-引用传递/" class="archive-article-date">
+  	<time datetime="2016-08-13T09:32:45.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-08-13</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/22/Python-IOError-cannot-open-resource问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python IOError: cannot open resource问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Dory
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">码畜一枚</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
